@@ -1,5 +1,7 @@
 {
-  "homepage": "https://b33pboop.github.io/panier-achats",
+  "Remarque":"Pour publier sur GitHub, renommer la prochaine propriété à homepage",
+  "homepage-ghpages": "https://b33pboop.github.io/panier-achats/",
+  "homepage": "",
   "name": "panier-achats",
   "version": "0.1.0",
   "private": true,
