@@ -1,10 +1,12 @@
 import './Produit.css';
 
-export default function Produit(){
-    <article>
-        <img src="images-produits/prd0001.webp" alt="homme en T-shirt" />
-        <div className="titre">Gapfit Recycled active T-shirt</div>
-        <div className="prix">Prix</div>
-        <button>Ajouter au panier</button>                    
-    </article>
+export default function Produit(props) {
+    return(
+        <article className='Produit'>
+            <img src={"images-produits/" + props.pid + ".webp"} alt= {props.nom} />
+            <div className="titre">{props.nom}</div>
+            <div className="prix">{props.prix}</div>
+            <button>Ajouter au panier</button>                    
+        </article>
+    )
 }
