@@ -1,9 +1,27 @@
 header{
+    position: sticky;
+    top: 0;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
+    color: whitesmoke;
+    background-color: #444;
+
     h1{
         font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    nav{
+        padding: 1rem 2rem;
+
+        display: flex;
+        align-items: center;
+
+        a{
+            padding-left: 0.75rem;
+        }
     }
 }
