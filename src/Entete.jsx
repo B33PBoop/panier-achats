@@ -7,7 +7,7 @@ export default function Entete({panier}) {
         <header className='Entete'>
             <h1>Magasin général</h1>
             <nav>
-                <Badge badgeContent={Object.values(panier).length} color='primary'>
+                <Badge badgeContent={Object.values(panier).reduce((acc, article) => acc+article.qte, 0)} color='primary'>
                     <ShoppingCartIcon />
                 </Badge>
                 <a href="#">Contactez-nous</a>
