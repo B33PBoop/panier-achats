@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/panier-achats/static/css/main.449860d4.css",
-    "main.js": "/panier-achats/static/js/main.2c2a812d.js",
-    "index.html": "/panier-achats/index.html",
-    "main.449860d4.css.map": "/panier-achats/static/css/main.449860d4.css.map",
-    "main.2c2a812d.js.map": "/panier-achats/static/js/main.2c2a812d.js.map"
+    "main.css": "/static/css/main.449860d4.css",
+    "main.js": "/static/js/main.e5e1e242.js",
+    "index.html": "/index.html",
+    "main.449860d4.css.map": "/static/css/main.449860d4.css.map",
+    "main.e5e1e242.js.map": "/static/js/main.e5e1e242.js.map"
   },
   "entrypoints": [
     "static/css/main.449860d4.css",
-    "static/js/main.2c2a812d.js"
+    "static/js/main.e5e1e242.js"
   ]
 }
