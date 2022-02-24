@@ -1,5 +1,8 @@
 html{
     box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
 }
 
 *, *::after, *::before{
@@ -10,6 +13,7 @@ body{
     margin: 0;
     font-family: 'Roboto Slab', 'Roboto', serif;
     font-size: clamp(0.75rem, calc(0.75rem + 1vw), 1.25rem);
+    overflow-x: hidden;
 }
 
 a{
