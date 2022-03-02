@@ -14,7 +14,19 @@ header{
         padding: 1rem 2rem;
     }
 
-    nav{
+    nav.nav-principale{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: auto;
+        column-gap: 1rem;
+
+        .lien-actif{
+            color: yellow;
+        }
+    }
+
+    nav.nav-secondaire{
         padding: 1rem 2rem;
 
         display: flex;

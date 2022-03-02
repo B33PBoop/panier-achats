@@ -2,8 +2,10 @@ import './App.scss';
 import Entete from './Entete';
 import PiedPage from './PiedPage';
 import ListeProduits from './ListeProduits';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import {Routes, Route} from 'react-router-dom';
+import Accueil from './Accueil';
+import Histoire from './Histoire';
 
 function App() {
   //si le panier est déja sauvegardé en localStorage, l'afficher, sinon ouvrir un panier vide
@@ -14,8 +16,6 @@ function App() {
 
   console.log("L'état panier: ", panier);
 
-  const[compteur, setCompteur] = useState(0);
-
   // sauvegarder le panier dans LocalStorage
   // utiliser le hook useEffect pour executer ce code de facon controlée
 
@@ -24,11 +24,12 @@ function App() {
   return (
     <div className="App">
       <Entete panier={panier}/>
-      <ListeProduits etatPanier={etatPanier}/>
-      <div>
-        <span>Nombres de clicks : {compteur}</span>
-        <button onClick={() => setCompteur(compteur+1)}>cliquez moi</button>
-      </div>
+      {/*Routes Spécifiques à chaque composant*/}
+      <Routes>
+        <Route path='/' element={<Accueil/>}/>
+        <Route path='/notre-histoire' element={<Histoire/>}/>
+        <Route path='/nos-produits' element={<ListeProduits etatPanier={etatPanier}/>}/>
+      </Routes>
       <PiedPage />
     </div>
   );

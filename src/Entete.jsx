@@ -1,16 +1,21 @@
 import './Entete.scss';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Badge from '@mui/material/Badge';
+import { NavLink } from 'react-router-dom';
 
 export default function Entete({panier}) {
 
-    //obtenire les 5 infos importantes pour le sommaire
+    //obtenir les 5 infos importantes pour le sommaire par déstructuration
     const {articlesDifferents, articlesTotaux, sousTotal, taxes, total} = calculerInfoPanier(Object.values(panier));
 
     return (
         <header className='Entete'>
-            <h1>Magasin général</h1>
-            <nav>
+            <h1><NavLink to="/">Magasin général</NavLink></h1>
+            <nav className="nav-principale">
+            <NavLink to="/nos-produits" className={({isActive}) => isActive ? 'lien-actif' : ''}>Produits</NavLink>
+            <NavLink to="/notre-histoire"  className={({isActive}) => isActive ? 'lien-actif' : ''}>Notre Histoire</NavLink>
+            </nav>
+            <nav className='nav-secondaire'>
                 <input type="checkbox" id='cc-sommaire-panier'/>
                 <div className="sommaire-panier">
                     <h3>Sommaire du panier</h3>
@@ -24,7 +29,7 @@ export default function Entete({panier}) {
                 <Badge badgeContent={articlesTotaux} color='primary'>
                     <label htmlFor="cc-sommaire-panier"><ShoppingCartIcon /></label>
                 </Badge>
-                <a href="#">Contactez-nous</a>
+                <NavLink to="/contact" className={({isActive}) => isActive ? 'lien-actif' : ''}>Contactez-nous</NavLink>
             </nav>
         </header>
     );
