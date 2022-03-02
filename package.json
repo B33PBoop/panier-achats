@@ -1,6 +1,6 @@
 {
   "Remarque": "Pour publier sur GitHub, renommer la prochaine propriété à homepage, puis run ghdeploy avant de le rechanger à -ghpages",
-  "homepage": "https://b33pboop.github.io/panier-achats/",
+  "homepage-ghpages": "https://b33pboop.github.io/panier-achats/",
   "name": "panier-achats",
   "version": "0.1.0",
   "private": true,
