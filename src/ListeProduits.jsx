@@ -2,7 +2,7 @@ import "./ListeProduits.scss";
 import Produit from "./Produit";
 import { useState, useEffect } from "react";
 import { bdFirestore } from "./firebase/init";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 
 export default function ListeProduits({etatPanier}){
@@ -11,8 +11,8 @@ export default function ListeProduits({etatPanier}){
 
     //Obtenir les produits de la collection Firestore
     useEffect(function() {
-        // obtenir tout les documents de la collection 'Mag-gen-produits'
-        getDocs(collection(bdFirestore, 'Mag-gen-produits')).then(
+        // obtenir tout les documents de la collection 'Mag-gen-produits' dont le prix est plus petit ou égal à 40
+        getDocs(query(collection(bdFirestore, 'Mag-gen-produits'), where('prix', '<=', 40))).then(
             qs => setProduits(qs.docs.map(doc => ({id:doc.id, ...doc.data()})))
         );
     }, [])
